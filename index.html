@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>7 naj samolotów</title>
+		<script>
+			let SlideIndex = -1;
+			let Slides = document.getElementsByClassName("slide");
+			let Cards = document.getElementsByClassName("card");
+			let CardsContainer = document.getElementsByClassName("cards-container");
+			let isHovered = false;
+			
+			function showSlides() {
+				for (let i = 0; i < Slides.length; i++) {
+					Slides[i].style.display = "none";
+				}
+				
+				SlideIndex = (SlideIndex + 1) % Slides.length;
+				Slides[SlideIndex].style.display = "block";
+				
+				resetHoverEffect();
+				if (!isHovered) {
+					waveCards(SlideIndex);
+				}
+				
+				setTimeout(showSlides, 4000);
+			}
+			
+			function resetHoverEffect() {
+				for (let i = 0; i < Cards.length; i++) {
+					Cards[i].classList.remove("hovered");
+				}
+			}
+
+			function waveCards(SlideIndex) {
+				Cards[SlideIndex].classList.add("hovered");
+			}
+
+			document.addEventListener("DOMContentLoaded", function () {
+				showSlides();
+				for (let i = 0; i < Cards.length; i++) {
+					Cards[i].addEventListener("mouseenter", function () {
+						isHovered = true;
+						resetHoverEffect();
+					});
+
+					Cards[i].addEventListener("mouseleave", function () {
+						isHovered = false;
+					});
+
+				}
+			});
+		
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="logo-container">
+  				<div class="square square-one face-top"></div>
+  				<div class="square square-two face-top"></div>
+  				<div class="square square-three face-top"></div>
+  				<div class="square square-four side"></div>
+  				<div class="square square-five side-2"></div>
+  			</div>
+			<div class="slideshow-container">
+				<div class="slide">
+					<img src="res/thumbnails/terminator.jpg" alt="terminator.jpg">
+				</div>
+				<div class="slide">
+					<img src="res/thumbnails/raptor.jpg" alt="raptor.jpg">
+				</div>
+				<div class="slide">
+					<img src="res/thumbnails/forger.jpg" alt="forger.jpg">
+				</div>
+				<div class="slide">
+					<img src="res/thumbnails/osprey.jpg" alt="osprey.jpg">
+				</div>	
+				<div class="slide">
+					<img src="res/thumbnails/flogger.jpg" alt="flogger.jpg">
+				</div>
+				<div class="slide">
+					<img src="res/thumbnails/x29.jpg" alt="x29.jpg">
+				</div>
+				<div class="slide">
+					<img src="res/thumbnails/tu144.jpg" alt="tu144.jpg">
+				</div>
+			</div>
+			<div class="logo-container">
+  				<div class="square square-one face-top"></div>
+  				<div class="square square-two face-top"></div>
+  				<div class="square square-three face-top"></div>
+  				<div class="square square-four side"></div>
+  				<div class="square square-five side-2"></div>
+  			</div>
+		</header>
+		<main>
+			<article class="card">
+				<h2>Su-37</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/terminator.jpg" width="100%" height="100%" alt="terminator.jpg">
+				</div>
+				<p>Rosja</p>
+				<ul>
+					<li>myśliwiec wielozadaniowy</li>
+					<br>
+					<li>generacja 4++</li>
+					<br>
+					<li>wektorowanie ciągu</li>
+				</ul>
+				<a href="terminator.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>F-22</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/raptor.jpg" width="100%" height="100%" alt="raptor.jpg">
+				</div>
+				<p>USA</p>
+				<ul>
+					<li>myśliwiec przewagi powietrznej</li>
+					<br>
+					<li>generacja 5</li>
+					<br>
+					<li>stealth</li>
+				</ul>
+				<a href="raptor.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>Jak-38M</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/forger.jpg" width="100%" height="100%" alt="forger.jpg">
+				</div>
+				<p>ZSRR</p>
+				<ul>
+					<li>myśliwiec szturmowy</li>
+					<br>
+					<li>generacja 3</li>
+					<br>
+					<li>pionowy start i/lub ladowanie</li>
+				</ul>
+				<a href="forger.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>Bell V22</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/osprey.jpg" width="100%" height="100%" alt="osprey.jpg">
+				</div>
+				<p>USA</p>
+				<ul>
+					<li>pionowzlot</li>
+					<br>
+					<li>generacja 4+</li>
+					<br>
+					<li>pionowy start i/lub lądowanie</li>
+				</ul>
+				<a href="osprey.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>MiG-23M</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/flogger.jpg" width="100%" height="100%" alt="flogger.jpg">
+				</div>
+				<p>ZSRR</p>
+				<ul>
+					<li>myśliwiec odrzutowy</li>
+					<br>
+					<li>generacja 3</li>
+					<br>
+					<li>zmienna geometria skrzydeł</li>
+				</ul>
+				<a href="flogger.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>X-29A</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/x29.jpg" width="100%" height="100%" alt="x29.jpg">
+				</div>
+				<p>USA</p>
+				<ul>
+					<li>samolot testowy</li>
+					<br>
+					<li>generacja 4++</li>
+					<br>
+					<li>przeciwny skos skrzydeł</li>
+				</ul>
+				<a href="x29.html" target="_blank" class=".link">Więcej...</a>
+			</article>
+			<article class="card">
+				<h2>Tu-144</h2>
+				<div class="card-image">
+					<img src="res/thumbnails/tu144.jpg" width="100%" height="100%" alt="tu144.jpg">
+				</div>
+				<p>ZSRR</p>
+				<ul>
+					<li>naddźwiękowy samolot pasażerski</li>
+					<br>
+					<li>generacja 3</li>
+					<br>
+					<li>ruchomy dziób</li>
+				</ul>
+				<a href="terminator.html" target="_blank">Więcej...</a>
+			</article>	
+		</main>
+		<div class="space"></div>
+		<footer>
+			<p>Bartosz Rosłan 2tb2</p>
+		</footer>
+	</body>
+</html>
