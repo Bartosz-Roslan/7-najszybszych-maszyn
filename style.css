@@ -27,7 +27,7 @@ img[src*="photo"] {
 	font-size:20px;
 	border-radius:20%;
 	background-color:var(--Front-Dark);
-	z-index:10;
+	z-index:20;
 }
 .menu-open:hover {
 	background-color:var(--Front-Med);
@@ -117,7 +117,7 @@ header {
 	justify-content:center;
 	align-items:center;
 }
-.main {
+.main a {
 	color:var(--Tagged);
 }
 .logo-container {
