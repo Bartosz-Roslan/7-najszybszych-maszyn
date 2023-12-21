@@ -112,6 +112,10 @@ a {
 	color:white;
 	text-decoration:none;
 }
+.main a {
+	color:var(--Tagged);
+	text-decoration:underline;
+}
 header {
 	display:flex;
 	justify-content:center;
@@ -238,6 +242,9 @@ main {
 	align-items:center;
 	background-color:var(--Front);
 	transition:.2s;
+}
+.form-card {
+	height:480px;
 }
 .card:hover, .hovered {
 	transform:translateY(-1rem);
