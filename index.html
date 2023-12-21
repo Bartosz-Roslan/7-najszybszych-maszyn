@@ -10,6 +10,10 @@
 			let Slides = document.getElementsByClassName("slide");
 			let Cards = document.getElementsByClassName("card");
 			let CardsContainer = document.getElementsByClassName("cards-container");
+			let ExitBtn = document.getElementById("exit");
+			let MenuBtn = document.getElementsByClassName("menu-open");
+			let Menu = document.getElementsByClassName("menu");
+			let isMenu = false;
 			let isHovered = false;
 			
 			function showSlides() {
@@ -38,6 +42,15 @@
 				Cards[SlideIndex].classList.add("hovered");
 			}
 
+			function toggleMenu() {
+				isMenu = !isMenu;
+				if (isMenu) {
+					Menu[0].style.display = "flex";
+				}
+				else {
+					Menu[0].style.display = "none";
+				}
+			}
 			document.addEventListener("DOMContentLoaded", function () {
 				showSlides();
 				for (let i = 0; i < Cards.length; i++) {
@@ -51,12 +64,23 @@
 					});
 
 				}
+				MenuBtn[0].onclick = toggleMenu;
+				
 			});
-		
 		</script>
-	</head>
+	</head>			
 	<body>
 		<header>
+			<div class="menu-open">≡</div>
+			<div class="menu">
+				<a href="https://pl.wikipedia.org/wiki/Su-37" target="_blank">Su-37</a>
+				<a href="https://pl.wikipedia.org/wiki/Lockheed_Martin_F-22_Raptor" target="_blank">F-22</a>
+				<a href="https://pl.wikipedia.org/wiki/Jak-38" target="_blank">Jak-38M</a>
+				<a href="https://pl.wikipedia.org/wiki/Bell-Boeing_V-22_Osprey" target="_blank">V-22</a>
+				<a href="https://pl.wikipedia.org/wiki/MiG-23" target="_blank">MiG-23</a>
+				<a href="https://pl.wikipedia.org/wiki/Grumman_X-29" target="_blank">X-29</a>
+				<a href="https://pl.wikipedia.org/wiki/Tu-144" target="_blank">Tu-144</a>
+			</div>
 			<div class="logo-container">
   				<div class="square square-one face-top"></div>
   				<div class="square square-two face-top"></div>
@@ -182,7 +206,7 @@
 					<br>
 					<li>generacja 4++</li>
 					<br>
-					<li>przeciwny skos skrzydeł</li>
+					<li>odwrotny skos skrzydeł</li>
 				</ul>
 				<a href="x29.html" target="_blank" class=".link">Więcej...</a>
 			</article>
@@ -199,7 +223,7 @@
 					<br>
 					<li>ruchomy dziób</li>
 				</ul>
-				<a href="terminator.html" target="_blank">Więcej...</a>
+				<a href="tu144.html" target="_blank">Więcej...</a>
 			</article>	
 		</main>
 		<div class="space"></div>
