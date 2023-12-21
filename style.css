@@ -27,6 +27,7 @@ img[src*="photo"] {
 	font-size:20px;
 	border-radius:20%;
 	background-color:var(--Front-Dark);
+	z-index:10;
 }
 .menu-open:hover {
 	background-color:var(--Front-Med);
