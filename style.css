@@ -61,7 +61,6 @@ img[src*="photo"] {
 }
 .navbar a {
 	background-color:var(--Front-Dark);
-	margin-top:20px;
 	padding:10px;
 }
 .navbar a:hover {
@@ -104,6 +103,9 @@ tr, th, td {
 }
 .description div {
 	max-width:80%;
+}
+.description img {
+	margin-bottom:20px;
 }
 a {
 	color:white;
