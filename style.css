@@ -117,9 +117,6 @@ header {
 	justify-content:center;
 	align-items:center;
 }
-.main a {
-	color:var(--Tagged);
-}
 .logo-container {
 	width:80px;
 	height:180px;
