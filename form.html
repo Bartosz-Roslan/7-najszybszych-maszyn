@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<title>Ankieta</title>
+	</head>
+	<body>
+		<h1>Ankieta</h1>
+		<div class="exit" style="top:0;" onclick="window.close();">X</div>
+		<form>
+			<fieldset id="q1">
+				<legend>Czy podobało się Panu/Pani przedstawione zestawienie?</legend>
+				<label for="q1y">Tak</label>
+				<input type="radio" id="q1y" name="ch1" value="yes">
+
+				<label for="q1n">Nie</label>
+				<input type="radio" id="q1n" name="ch1" value="no">
+			</fieldset>
+			<fieldset id="q2">
+				<legend>Czy znał/a Pan/Pani wszystkie przedstawione samoloty?</legend>
+				<label for="q2y">Tak</label>
+				<input type="radio" id="q2y" name="ch2" value="yes">
+
+				<label for="q2n">Nie</label>
+				<input type="radio" id="q2n" name="ch2" value="no">
+			</fieldset>
+			<fieldset id="q3">
+				<legend>Czy jest coś co możnaby zmienić w przedstawionym zestawieniu?</legend>
+				<label for="q3y">Tak</label>
+				<input type="radio" id="q3y" name="ch3" value="yes">
+
+				<label for="q3n">Nie</label>
+				<input type="radio" id="q3n" name="ch3" value="no">
+			</fieldset>
+			<fieldset id="q4">
+				<legend>Czy poleciłby/poleciłaby Pan/Pani to zestawienie?</legend>
+				<label for="q4y">Tak</label>
+				<input type="radio" id="q4y" name="ch4" value="yes">
+
+				<label for="q4n">Nie</label>
+				<input type="radio" id="q4n" name="ch4" value="no">
+			</fieldset>
+			<input type="reset" value="Reset" id="reset">
+			<input type="submit" value="Submit">
+		</form>
+	</body>
+</html>
