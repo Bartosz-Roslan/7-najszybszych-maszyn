@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<h1>Ankieta</h1>
-		<div class="exit" style="top:0;" onclick="history.back();">X</div>
-		<form>
+		<a class="exit" style="top:0;" href="index.html">X</a>
+		<form method="post">
 			<fieldset id="q1">
 				<legend>Czy podobało się Panu/Pani przedstawione zestawienie?</legend>
 				<label for="q1y">Tak</label>
@@ -43,7 +43,7 @@
 				<input type="radio" id="q4n" name="ch4" value="no">
 			</fieldset>
 			<input type="reset" value="Reset" id="reset">
-			<input type="submit" value="Submit" onclick="history.back();">
+			<input type="submit" value="Submit" id="Submit">
 		</form>
 	</body>
 </html>
