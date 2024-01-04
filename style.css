@@ -304,24 +304,6 @@ footer {
 	img[src*="photo"] {
 		width:600px;
 	}
-	main {
-		flex-direction:row;
-	}
-	.logo-container {
-		transform:scale(1.7);
-	}
-	.logo-container:nth-child(1) {
-		transform:scale(-1.7);
-	}
-	.card {
-		box-shadow:-1rem 0 3rem black;
-	}
-	.card:hover~.card, .hovered~.card {
-		transform:translateX(calc(140px - ((100vw - 1200px)/10)));
-	}
-	.card:not(:first-child) {
-		margin-left:calc(-160px + ((100vw - 1200px)/10));
-	}
 }
 @media screen and (min-width:601px) and (max-width:899px) {
 	img[src*="photo"] {
