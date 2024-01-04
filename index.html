@@ -23,23 +23,8 @@
 				
 				SlideIndex = (SlideIndex + 1) % Slides.length;
 				Slides[SlideIndex].style.display = "block";
-				
-				resetHoverEffect();
-				if (!isHovered) {
-					waveCards(SlideIndex);
-				}
-				
+								
 				setTimeout(showSlides, 4000);
-			}
-			
-			function resetHoverEffect() {
-				for (let i = 0; i < Cards.length; i++) {
-					Cards[i].classList.remove("hovered");
-				}
-			}
-
-			function waveCards(SlideIndex) {
-				Cards[SlideIndex].classList.add("hovered");
 			}
 
 			function toggleMenu() {
